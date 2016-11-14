@@ -1,0 +1,43 @@
+#banner img{
+	width: 100%;
+}
+#logo {
+	position: absolute;
+	border: 3px solid red;
+	border-radius:50%; 
+	max-width: 125px;
+	top: -122px;
+	left: 102px;
+}
+#left {
+	position: relative;
+	padding-top: 5px;
+    width: 150px;
+     min-height: 150px;
+     border: 1px solid #CDCDCD;
+     float:left;
+     background-color: grey;
+     margin-bottom: 5px;
+}
+a{
+	font-size: 30px;
+	margin: 20px;
+}
+#footer{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	color: blue;
+}
+.info{
+	position: absolute;
+	top : 22px;
+	left: 160px;
+	width: 1175px;
+}
+.info p{
+	padding-left: 5px;
+}
+.info img{
+	padding-left: 145px;
+}

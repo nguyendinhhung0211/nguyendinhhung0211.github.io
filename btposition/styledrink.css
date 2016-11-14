@@ -1,0 +1,21 @@
+.banner img{
+	width: 100%;
+}
+.content{
+	text-align: center;
+}
+.abc{
+	padding: 12px;
+	float: left;
+	width: 31%;
+}
+.abc p{
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 116px;
+}
+.abc img{
+	text-align: center;
+}
+body { background-color:grey; 
+}

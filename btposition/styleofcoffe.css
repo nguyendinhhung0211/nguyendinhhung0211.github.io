@@ -1,0 +1,26 @@
+*{
+	box-sizing: border-box;
+}
+.container{
+	margin: 0 auto;
+	max-width: 1280px;
+}
+.banner img{
+	width: 100%;
+}
+.item{
+	margin: 10px;
+	float: left;
+	width: 31%;
+}
+.item p{
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 116px;
+	color: white;
+}
+.item img{
+	padding-left: 100px;
+}
+body { background-color:black; 
+}
