@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="container">
+		<img src="cf.jpg">
+		<div class="dky">
+		<h1 style="color: white">Đăng kí tài khoản</h1>
+
+			<form action="index1.html" name="form_register">
+				<input type="text" name="name" placeholder="Họ tên"><span class="error"></span><br>
+				<p style="color: #00BCD4">Ngày sinh</p><input type="date" name="bday"><br>
+				<input type="radio" name="gender"><span class="error"></span> <label style="color: #00BCD4">Nam</label>
+				<input type="radio" name="gender"><span class="error"></span> <label style="color: #00BCD4">Nữ</label>
+				<input type="radio" name="gender"><span class="error"></span> <label style="color: #00BCD4">Khác</label><br>
+				<input type="text" name="address" placeholder="Địa chỉ"><span class="error"></span><br>
+				<input type="tel" name="telephone" placeholder="SĐT"><span class="error"></span><br>
+				<input type="text" name="email" placeholder="email"><span class="error"></span><br>
+				<input type="password" name="password" placeholder="password"><span class="error"></span><br>
+				<input type="submit" value="Đăng nhập">
+			</form>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$('form[name="form_register"]').on('submit', function(){
+			var x = true;
+			if ($("input[name='name']").val().match(/[a-z0-9_-]{3,16}/) == null){
+				// console.log('hello');
+				$("input[name='name']").next('span').text('Name is empty');
+				x = false;
+				//Biểu thức kiểm tra username có từ 3 đến 16 ký tự không
+			}
+			else{$("input[name='name']").next('span').text('');}
+
+			if ($("input[name='email']").val().match(/([\w\.])+@([a-zA-Z0-9\-])+\.([a-zA-Z]{2,4})(\.[a-zA-Z]{2,4})?/) == null){
+				$("input[name='email']").next('span').text('Email is invalid');
+				x = false;
+				//Kiểm tra tính hợp lệ của email
+			}
+			else{$("input[name='email']").next('span').text('');}
+
+			if ($("input[name='address']").val().trim() == ''){
+				$("input[name='address']").next('span').text('Address is empty');
+				console.log('ok');
+				x = false;
+			}
+			else{$("input[name='address']").next('span').text('');}
+
+			if ($("input[name='telephone']").val().match(/(\+\d{2,4})?\s?(\d{10})/) == null){
+				$("input[name='telephone']").next('span').text('Telephone is empty');
+				x = false;
+				//Tìm số điện thoại, ví dụ +84 983435230
+			}
+			else{$("input[name='telephone']").next('span').text('');}
+
+			if ($("input[name='bday']").val() == ''){
+				$("input[name='bday']").next('span').text('Birthday is empty');
+				x = false;
+			}
+			else{$("input[name='bday']").next('span').text('');}
+
+			if ($("input[name='gender']:checked").val() == undefined){
+				$("input[name='gender']").next('span').text('Birthday is empty');
+				x = false;
+			}
+			else{$("input[name='gender']").next('span').text('');}
+
+			if ($("input[name='password']").val().match(/[a-z0-9_-]{3,16}/) == null){
+				$("input[name='password']").next('span').text('Password is empty');
+				x = false;
+				// Mật khẩu phải dài từ 4 đến 8 chữ số và bao gồm ít nhất một chữ số số.
+			}
+			else{$("input[name='password']").next('span').text('');}
+
+			return x;
+		});
+	</script>
+</body>
+</html>

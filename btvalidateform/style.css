@@ -1,0 +1,47 @@
+#container{
+	margin: 0 auto;
+}
+img{
+	max-width: 100%;
+}
+h1{
+	margin-left: 15px;
+}
+.dky{
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	border-radius: 20px;
+	border:1px solid grey;
+	width: 300px;
+}
+form{
+	margin-left: 40px;
+}
+input[type=text]{
+	width: 208px;
+	height: 25px;
+	border:1px solid black;
+	border-radius: 5px;
+}	
+input[type=email]{
+	width: 208px;
+	height: 25px;
+	border:1px solid black;
+	border-radius: 5px;
+}	
+input[type=tel]{
+	width: 208px;
+	height: 25px;
+	border:1px solid black;
+	border-radius: 5px;
+}	
+input[type=password]{
+	width: 208px;
+	height: 25px;
+	border:1px solid black;
+	border-radius: 5px;
+}	
+input[type=date]{
+	border-radius: 5px;
+}	
